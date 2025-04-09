@@ -5,10 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Glow Signup</title>
 
-  <!-- Custom Styles for Background and Centering -->
+  <!-- Background + Centering Styles -->
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      background: linear-gradient(135deg, #fceabb, #f8b500); /* Soft warm gradient */
+      background: linear-gradient(135deg, #fceabb, #f8b500);
       margin: 0;
       padding: 0;
       height: 100vh;
@@ -23,37 +27,74 @@
       justify-content: center;
       align-items: center;
       padding: 20px;
-      box-sizing: border-box;
+      width: 100%;
+      max-width: 100%;
     }
 
     .ml-form-embedWrapper {
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      background-color: #fffbe6;
       border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h4 {
+      margin-top: 0;
     }
   </style>
 
-  <!-- MailerLite form styles and scripts -->
+  <!-- MailerLite Styles -->
   <link href="https://assets.mlcdn.com/fonts.css?version=1743581" rel="stylesheet" />
-  <!-- your existing embedded styles and MailerLite styles would remain here -->
 </head>
 <body>
 
-  <!-- Your existing form content starts here -->
+  <!-- MailerLite Embed -->
   <div id="mlb2-24610862" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-24610862">
     <div class="ml-form-align-center">
       <div class="ml-form-embedWrapper embedForm">
-        <!-- Form content (already in your file) goes here -->
-        <!-- I left the original form unchanged -->
+        <div class="ml-form-embedBody row-form">
+          <div class="ml-form-embedContent">
+            <h4>Let's glow ✧˖°.🌿</h4>
+            <p>Be the first to <em>glow</em> when we launch dreamy escapes, wellness rituals, and curated glow guides!</p>
+          </div>
+          <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1439398/forms/151136542072505783/subscribe" method="post" target="_blank">
+            <div class="ml-form-formContent horozintalForm">
+              <div class="ml-form-horizontalRow">
+                <div style="width: 100%;">
+                  <div class="ml-field-group ml-field-name" style="margin-bottom: 10px;">
+                    <input type="text" name="fields[name]" placeholder="Name" required />
+                  </div>
+                  <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required" style="margin-bottom: 10px;">
+                    <input type="email" name="fields[email]" placeholder="Email" required />
+                  </div>
+                  <div class="ml-button-horizontal primary">
+                    <button type="submit">Subscribe</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <input type="hidden" name="ml-submit" value="1" />
+            <input type="hidden" name="anticsrf" value="true" />
+          </form>
+        </div>
+        <div class="ml-form-successBody row-success" style="display: none;">
+          <div class="ml-form-successContent">
+            <h4>Thank you!</h4>
+            <p>You’ve successfully joined our subscriber list.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Existing scripts -->
+  <!-- MailerLite Scripts -->
   <script>
     function ml_webform_success_24610862() {
       var $ = ml_jQuery || jQuery;
-      $('.ml-subscribe-form-24610862 .row-success').show();
-      $('.ml-subscribe-form-24610862 .row-form').hide();
+      document.querySelector('.row-success').style.display = 'block';
+      document.querySelector('.row-form').style.display = 'none';
     }
   </script>
   <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024"></script>
